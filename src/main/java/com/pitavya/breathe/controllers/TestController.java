@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/breathe/api")
 public class TestController {
 
 	private static Logger LOGGER = Logger.getLogger(TestController.class);
