@@ -1,5 +1,7 @@
 package com.pitavya.breathe.model;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +27,9 @@ public class UserEntity {
 
 	@Column(name = "profilePic")
 	private String profilePic;
+
+	@Column(name = "timestamp")
+	private Timestamp timestamp;
 
 	public long getUserId() {
 		return userId;
@@ -64,6 +69,14 @@ public class UserEntity {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public Timestamp getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Timestamp timestamp) {
+		this.timestamp = timestamp;
 	}
 
 }

@@ -9,6 +9,7 @@ import com.pitavya.breathe.model.UserEntity;
 import com.pitavya.breathe.requestModels.SaveUserRequestModel;
 import com.pitavya.breathe.service.UserService;
 import com.pitavya.breathe.utils.BreatheErrorConstants;
+import com.pitavya.breathe.utils.DateUtils;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -32,6 +33,7 @@ public class UserServiceImpl implements UserService {
 		user.setEmailId(requestModel.getEmailId());
 		user.setProvidedId(requestModel.getProvidedId());
 		user.setProfilePic(requestModel.getProfilePicUri());
+		user.setTimestamp(DateUtils.getTimeStamp());
 
 		UserEntity savedUser = userDao.saveUser(user);
 
